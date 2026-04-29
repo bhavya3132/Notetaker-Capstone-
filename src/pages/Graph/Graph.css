@@ -1,0 +1,98 @@
+/* ========================================
+   Graph Page — TerraNote
+   ======================================== */
+
+.graph-wrapper {
+  position: relative;
+  height: calc(100vh - 120px);
+}
+
+.graph-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Color legend overlay */
+.graph-legend {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(43, 76, 54, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(245, 235, 210, 0.15);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+.legend-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--cream);
+  letter-spacing: 0.3px;
+}
+
+/* Hint text */
+.graph-hint {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(43, 76, 54, 0.8);
+  backdrop-filter: blur(4px);
+  color: rgba(245, 235, 210, 0.7);
+  font-family: var(--font-body);
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 5;
+  border: 1px solid rgba(245, 235, 210, 0.1);
+}
+
+/* Bottom branding bar */
+.graph-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5;
+}
+.bottom-bar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -4px;
+  opacity: 0.55;
+}
+.sprout-icon {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
+}
+.bottom-bar-strip {
+  width: 220px;
+  height: 36px;
+  background-color: var(--forest);
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
+}

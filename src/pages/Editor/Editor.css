@@ -1,0 +1,218 @@
+/* ========================================
+   Editor Page — TerraNote
+   ======================================== */
+
+.editor-page {
+  max-width: 820px;
+}
+
+/* Toolbar */
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.editor-back-btn {
+  background: var(--wood);
+  color: var(--cream);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  border: 2px solid var(--wood-dark);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.editor-back-btn:hover {
+  background: var(--wood-light);
+  transform: translateX(-2px);
+}
+.editor-toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+.editor-preview-btn,
+.editor-save-btn {
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.editor-preview-btn {
+  background: rgba(245, 235, 210, 0.15);
+  color: var(--forest);
+  border: 2px solid var(--wood);
+}
+.editor-preview-btn.active {
+  background: var(--wood);
+  color: var(--cream);
+}
+.editor-preview-btn:hover {
+  background: var(--wood-light);
+  color: var(--cream);
+}
+.editor-save-btn {
+  background: var(--forest);
+  color: var(--cream);
+  border: 2px solid var(--forest);
+}
+.editor-save-btn:hover {
+  background: #3a6647;
+}
+
+/* Title */
+.editor-title {
+  width: 100%;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--forest);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(43, 76, 54, 0.2);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+  outline: none;
+}
+.editor-title::placeholder {
+  color: rgba(43, 76, 54, 0.3);
+}
+
+/* Meta row */
+.editor-meta-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.editor-category,
+.editor-tags {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--forest);
+  background: rgba(245, 235, 210, 0.5);
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(43, 76, 54, 0.15);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+.editor-category:focus,
+.editor-tags:focus {
+  border-color: var(--sage);
+}
+.editor-category::placeholder,
+.editor-tags::placeholder {
+  color: rgba(43, 76, 54, 0.35);
+}
+
+/* Tag chips */
+.editor-tag-chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.editor-tag-chip {
+  background: var(--sage);
+  color: var(--cream);
+  font-size: 12px;
+  font-family: var(--font-body);
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-weight: 500;
+}
+
+/* Body */
+.editor-body-area {
+  min-height: 400px;
+}
+.editor-textarea {
+  width: 100%;
+  min-height: 400px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--forest);
+  background: rgba(245, 235, 210, 0.35);
+  border: 2px solid rgba(43, 76, 54, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+.editor-textarea:focus {
+  border-color: var(--sage);
+}
+.editor-textarea::placeholder {
+  color: rgba(43, 76, 54, 0.3);
+}
+
+/* Preview pane */
+.editor-preview-pane {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--forest);
+  background: rgba(245, 235, 210, 0.35);
+  border: 2px solid rgba(43, 76, 54, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  min-height: 400px;
+}
+.editor-preview-pane h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  margin: 0 0 16px;
+  color: var(--forest);
+}
+.editor-preview-pane h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  margin: 0 0 12px;
+  color: var(--forest);
+}
+.editor-preview-pane h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+.editor-preview-pane p {
+  margin: 0 0 12px;
+}
+.editor-preview-pane strong {
+  font-weight: 700;
+}
+.editor-preview-pane em {
+  font-style: italic;
+}
+.editor-preview-pane ul,
+.editor-preview-pane ol {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+.editor-preview-pane code {
+  background: rgba(43, 76, 54, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.editor-preview-pane pre {
+  background: var(--forest);
+  color: var(--cream);
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+.editor-preview-pane blockquote {
+  border-left: 4px solid var(--sage);
+  padding-left: 16px;
+  color: var(--wood);
+  font-style: italic;
+  margin: 0 0 12px;
+}

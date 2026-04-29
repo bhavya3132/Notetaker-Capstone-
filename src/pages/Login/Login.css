@@ -1,0 +1,190 @@
+/* ========================================
+   Login Page — TerraNote
+   ======================================== */
+
+.login-page {
+  background-color: var(--forest);
+  background-image: url('/assets/topography-linen.svg');
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: var(--linen);
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: -5px 10px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 30px;
+}
+
+.sign-txt {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.welcome-txt {
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-body);
+  align-items: center;
+  width: 100%;
+}
+
+.email-input,
+.password-input {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.65);
+  height: 50px;
+  width: 472px;
+  background: #FBF8E9;
+  padding: 0 16px;
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.email-input:focus,
+.password-input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(100, 126, 77, 0.2);
+}
+
+.input-error {
+  border-color: #c0392b !important;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15) !important;
+}
+
+.password-input {
+  margin-bottom: 8px;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.logo {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 35px;
+  letter-spacing: 0.5px;
+  color: var(--linen);
+}
+
+.login-forgot {
+  align-self: flex-start;
+  margin-left: 95px;
+  text-decoration: none;
+  color: var(--sage);
+  font-size: 14px;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 45px;
+  width: 200px;
+  font-family: var(--font-body);
+  font-size: 27px;
+  background-color: rgba(101, 130, 110, 1);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: opacity var(--transition-fast), transform 0.1s ease-out;
+}
+
+.login-btn:hover {
+  opacity: 0.91;
+}
+
+.login-btn:active {
+  opacity: 0.75;
+  transform: scale(0.97);
+}
+
+.login-btn-img {
+  margin-right: 15px;
+  width: 32.5px;
+}
+
+.login-links {
+  text-decoration: none;
+  color: var(--sage);
+  cursor: pointer;
+}
+
+.login-links:hover {
+  text-decoration: underline;
+}
+
+.login-disc {
+  margin: 16px 100px 0;
+  color: rgb(83, 83, 83);
+  font-size: 11px;
+  text-align: center;
+}
+
+.login-new {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.login-get-started {
+  font-weight: 600;
+}
+
+/* Shake animation for validation errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.5s ease;
+}

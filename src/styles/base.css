@@ -1,0 +1,75 @@
+/* ========================================
+   TerraNote — Base Styles & Reset
+   ======================================== */
+
+@import './variables.css';
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body */
+body {
+  background-color: var(--linen);
+  font-family: var(--font-body);
+  background-image: url('/assets/topography-wood.svg');
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  min-height: 100vh;
+  color: var(--forest);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--wood-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--wood);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove button defaults */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Remove input defaults */
+input, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}

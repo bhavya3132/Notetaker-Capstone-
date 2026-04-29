@@ -1,0 +1,124 @@
+/* ========================================
+   Notes Page — TerraNote
+   ======================================== */
+
+.notes-wrapper {
+  position: relative;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+/* Note Card */
+.note-card {
+  background-color: var(--wood);
+  border-radius: 14px;
+  padding: 22px 26px;
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--wood-dark);
+  box-shadow: var(--shadow-inset), var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.note-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-inset), var(--shadow-card-hover);
+}
+
+/* Delete button on each card */
+.note-card-delete {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(245, 235, 210, 0.2);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  z-index: 2;
+}
+.note-card:hover .note-card-delete {
+  opacity: 1;
+}
+.note-card-delete:hover {
+  background: rgba(192, 57, 43, 0.75);
+  border-color: rgba(192, 57, 43, 0.9);
+  transform: scale(1.15);
+}
+.note-card-delete:active {
+  transform: scale(0.9);
+}
+
+.note-card-title {
+  font-family: var(--font-title);
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 8px 0;
+  letter-spacing: 1px;
+  color: var(--cream);
+}
+.note-card-divider {
+  border: none;
+  border-top: 2px solid rgba(245, 235, 210, 0.30);
+  margin: 0 0 16px 0;
+}
+.note-card-label {
+  font-family: var(--font-body);
+  font-size: 16px;
+  margin: 6px 0;
+  color: var(--cream);
+}
+.note-card-label strong {
+  font-weight: 700;
+}
+.note-card-preview {
+  font-family: var(--font-body);
+  font-size: 17px;
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(245, 235, 210, 0.80);
+  font-style: italic;
+}
+
+/* Floating Action Button (new note) */
+.add-note-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid var(--wood-dark);
+  background-color: var(--sage);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  z-index: 20;
+}
+.add-note-fab:hover {
+  transform: scale(1.12) rotate(90deg);
+  background-color: var(--forest);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.add-note-fab:active {
+  transform: scale(0.95);
+}

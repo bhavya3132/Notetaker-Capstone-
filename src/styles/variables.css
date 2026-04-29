@@ -1,0 +1,33 @@
+/* ========================================
+   TerraNote — Design Tokens
+   ======================================== */
+
+:root {
+  /* Core palette */
+  --forest: rgba(43, 76, 54, 1);
+  --linen: rgba(245, 235, 210, 1);
+  --sage: rgba(100, 126, 77, 1);
+  --wood: rgba(126, 109, 85, 1);
+  --wood-light: rgba(150, 133, 107, 1);
+  --wood-dark: rgba(100, 86, 66, 1);
+  --cream: #F5EBD2;
+
+  /* Sidebar dimensions */
+  --sidebar-width: 260px;
+  --sidebar-collapsed: 70px;
+
+  /* Transition speeds */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Typography */
+  --font-body: "Roboto Serif", serif;
+  --font-display: "Playfair Display", serif;
+  --font-title: "IM Fell English SC", serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.18);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}

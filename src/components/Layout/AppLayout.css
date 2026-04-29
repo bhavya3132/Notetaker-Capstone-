@@ -1,0 +1,16 @@
+/* ========================================
+   App Layout
+   ======================================== */
+
+.app-layout {
+  min-height: 100vh;
+}
+
+.app-main {
+  transition: margin-left var(--transition-normal);
+  min-height: 100vh;
+}
+
+.app-content {
+  padding: 20px 20px 40px;
+}
