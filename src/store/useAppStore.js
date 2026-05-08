@@ -63,7 +63,7 @@ const useAppStore = create(
     (set, get) => ({
       // ===== USER =====
       user: {
-        name: 'Aditya',
+        name: 'User',
         email: 'aditya@terranote.dev',
         streak: 5,
         lastActiveDate: new Date().toISOString().split('T')[0],
